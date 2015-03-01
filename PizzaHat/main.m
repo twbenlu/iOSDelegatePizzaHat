@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
+#import "PizzaHat.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        PizzaHat *pizzaHat = [[PizzaHat alloc]init];
+        User *user = [[User alloc]init];
+        pizzaHat.delegate =  user;
+        [pizzaHat OnPizzaok];
     }
     return 0;
 }
